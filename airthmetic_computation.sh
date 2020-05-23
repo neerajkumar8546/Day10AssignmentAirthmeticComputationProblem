@@ -24,3 +24,9 @@ echo "Compute Airthmeic computation UC2 :- a + b * c "
 
    Computation2=$(( ($a * $b) + $c ))
    echo $Computation2
+
+#Compute Airthmetic Computation Uc4
+
+   echo "Compute Airthmetic Computation Uc4 :- c + a / b "
+   computation3=$(( $c + ($a / $b) ))
+   echo $computation3
