@@ -63,3 +63,26 @@ echo "Compute Airthmeic computation UC2 :- a + b * c "
 		Store_array[j]=$(( ${store_Computation[$j]} ))
 	done
 	echo "Array :- "${Store_array[@]}
+
+printf "\n"
+
+#show computation result in the descending order
+
+	echo "show computation result in the descending order Using Bubble Sort "
+	 	
+		for (( k = 0; k<4; k++ )) 
+		do
+    		for(( l = 0; l<4-i-1; l++ )) 
+    		do
+        		if [ ${Store_array[l]} -lt ${Store_array[$((l+1))]} ] 
+        		then
+            	# swap 
+            	temp=${Store_array[l]} 
+            	Store_array[$l]=${Store_array[$((l+1))]}   
+            	Store_array[$((l+1))]=$temp 
+        		fi
+    		done
+		done
+   	echo "show computation result in the Descending Order : " ${Store_array[@]}
+		printf "\n"
+
