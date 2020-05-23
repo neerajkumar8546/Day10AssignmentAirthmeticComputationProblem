@@ -22,8 +22,8 @@ echo "Compute Airthmeic computation UC2 :- a + b * c "
 
    echo "Compute Airthmetic Computation Uc3 :- a * b + c"
 
-   Computation2=$(( ($a * $b) + $c ))
-   echo $Computation2
+   computation2=$(( ($a * $b) + $c ))
+   echo $computation2
 
 #Compute Airthmetic Computation Uc4
 
@@ -35,5 +35,18 @@ echo "Compute Airthmeic computation UC2 :- a + b * c "
 
    echo "Compute Airthmetic Computation Uc5 :- a % b + c"
 
-   Computation4=$(( ($a % $b) + $c ))
-   echo $Computation4
+   computation4=$(( ($a % $b) + $c ))
+   echo $computation4
+
+#Adding Solutions Into a Dictionary
+
+	printf "\n"
+	echo "Adding Solutions Into a Dictionary UC6 :-"
+	printf "\n"
+	declare -A store_Computation
+	store_Computation[1]=$(( $computation1 ));
+	store_Computation[2]=$(( $computation2 ));
+	store_Computation[3]=$(( $computation3 ));
+	store_Computation[4]=$(( $computation4 ));
+
+	echo "Dictionary :- " ${store_Computation[@]}
