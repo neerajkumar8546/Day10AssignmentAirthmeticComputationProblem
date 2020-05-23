@@ -86,3 +86,21 @@ printf "\n"
    	echo "show computation result in the Descending Order : " ${Store_array[@]}
 		printf "\n"
 
+##show computation result in the descending order
+echo "show computation result in the descending order using bubble sort"
+
+for ((i = 0; i<4; i++))
+   do
+      for((j = 0; j<4-i-1; j++))
+      	do
+
+        		if [ ${Store_array[j]} -gt ${Store_array[$((j+1))]} ]
+        		then
+      		#SWAPPING
+            temp=${Store_array[j]}
+            Store_array[$j]=${Store_array[$((j+1))]}
+            Store_array[$((j+1))]=$temp
+        		fi
+      	done
+   	done
+   	echo "show computation result in the Ascending Order "${Store_array[@]}
