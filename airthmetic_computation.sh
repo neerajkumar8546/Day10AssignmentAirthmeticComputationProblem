@@ -50,3 +50,16 @@ echo "Compute Airthmeic computation UC2 :- a + b * c "
 	store_Computation[4]=$(( $computation4 ));
 
 	echo "Dictionary :- " ${store_Computation[@]}
+
+
+#Adding Solutions Into a Dictionary
+
+	printf "\n"
+	echo "Store Dictionary into Array  "
+	printf "\n"
+
+	for (( j=1; j<5; j++ ))
+	do
+		Store_array[j]=$(( ${store_Computation[$j]} ))
+	done
+	echo "Array :- "${Store_array[@]}
