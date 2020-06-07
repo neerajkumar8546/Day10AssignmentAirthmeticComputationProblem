@@ -66,41 +66,20 @@ echo "Compute Airthmeic computation UC2 :- a + b * c "
 
 printf "\n"
 
-#show computation result in the descending order
 
-	echo "show computation result in the descending order Using Bubble Sort "
-	 	
-		for (( k = 0; k<4; k++ )) 
-		do
-    		for(( l = 0; l<4-i-1; l++ )) 
-    		do
-        		if [ ${Store_array[l]} -lt ${Store_array[$((l+1))]} ] 
-        		then
-            	# swap 
-            	temp=${Store_array[l]} 
-            	Store_array[$l]=${Store_array[$((l+1))]}   
-            	Store_array[$((l+1))]=$temp 
-        		fi
-    		done
-		done
-   	echo "show computation result in the Descending Order : " ${Store_array[@]}
-		printf "\n"
 
-##show computation result in the descending order
-echo "show computation result in the descending order using bubble sort"
+##show computation result in the Ascending order
+echo "show computation result in the Ascending order "
+printf "\n"
+echo ${Store_array[*]}| tr " " "\n" | sort -n | tr "\n" " "
+printf "\n"
 
-for ((i = 0; i<4; i++))
-   do
-      for((j = 0; j<4-i-1; j++))
-      	do
 
-        		if [ ${Store_array[j]} -gt ${Store_array[$((j+1))]} ]
-        		then
-      		#SWAPPING
-            temp=${Store_array[j]}
-            Store_array[$j]=${Store_array[$((j+1))]}
-            Store_array[$((j+1))]=$temp
-        		fi
-      	done
-   	done
-   	echo "show computation result in the Ascending Order "${Store_array[@]}
+##show computation result in the Descending order
+echo "show computation result in the Descending order "
+printf "\n"
+echo ${Store_array[*]}| tr " " "\n" | sort -nr | tr "\n" " "
+
+
+
+   	
